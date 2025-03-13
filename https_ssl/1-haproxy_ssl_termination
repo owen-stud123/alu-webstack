@@ -1,0 +1,6 @@
+listen web_servers
+    bind *:80
+    bind *:443 ssl crt /etc/haproxy/certs/bruceshimwa.tech.pem
+    balance roundrobin
+    server web-01 18.206.246.203:80 check
+    server web-02 35.175.244.21:80 check
